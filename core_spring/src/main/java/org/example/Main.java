@@ -1,17 +1,19 @@
 package org.example;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-// Ensure Spring dependencies are included in your build system, e.g., Maven or Gradle
 
+@SpringBootApplication
 public class Main {
     public static void main(String[] args) {
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
-        Sim sim = applicationContext.getBean("sim", Sim.class);
 
-        // Calling the methods
-        sim.calling();
-        sim.data();
+        // Setter Injection
+//        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+//        Student student = context.getBean("setterDependence_student", Student.class);
+//        student.displayInfo();
 
+//        // Constructor Injection
+//        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+//        Student student = context.getBean("constructorDependence_student", Student.class);
+//        student.displayInfo();
     }
 }

@@ -11,7 +11,4 @@ public class TaxCalculator {
         return taxstrategy.calculateTax(amount);
     }
 
-    public void setTaxstrategy(Taxstrategy taxstrategy) {
-        this.taxstrategy = taxstrategy;
-    }
 }

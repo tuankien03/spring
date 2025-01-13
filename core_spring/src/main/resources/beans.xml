@@ -4,6 +4,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="sim" class="org.example.Jio"></bean>
-
+    <bean id="sim" class="org.example.Jio"/>
+    <bean id="setterDependence_student" class="org.example.ConstructorSetterInjection.Student">
+        <property name="id" value="1"/>
+        <property name="studentName" value="Kien setter"/>
+    </bean>
+    <bean id="constructorDependence_student" class="org.example.ConstructorSetterInjection.Student">
+        <constructor-arg name="id" value="2"/>
+        <constructor-arg name="studentName" value="Kien constructor"/>
+    </bean>
 </beans>
